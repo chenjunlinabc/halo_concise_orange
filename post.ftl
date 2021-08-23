@@ -5,7 +5,7 @@
     <article id="post-content" class="container">
         <div class="post-content-main">
             <div class="post-mains"><a href="${blog_url!}">首页</a> &raquo;<a href="${post.fullPath!}">${post.title}</a> </div>
-           <div class="post-mains">
+            <div class="post-mains">
                 <h3 class="post-title">
                      <a href="${post.fullPath!}">${post.title}</a><!-- 文章标题-->
                 </h3>
@@ -15,7 +15,7 @@
                     
                     </li>
                     <li class="nav-item">
-                        ${post.createTime?string("yyyy-MM-dd")} <!--文章发布时间-->
+                        ${post.createTime?string("yyyy年MM月dd日")} <!--文章发布时间-->
                     </li>
                     
                 </ul>
@@ -44,10 +44,8 @@
                     <div class="change-left">
                         <a class="btn" role="navigation">下一篇：没有了</a>
                     </div>
-
                 </#if>
             </div>
-            
             <div id="comment_widget" style="margin: 30px;">
                 <#include "module/comment.ftl">
                 <@comment post=post type="post" />
@@ -60,9 +58,6 @@
             <svg t="1628425563723" class="icon go" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3790" width="32" height="32"><path d="M624.401067 601.463467L512 489.0624l-112.401067 112.401067-48.264533-48.264534L512 392.533333l160.6656 160.6656-48.264533 48.264534zM512 819.2a307.2 307.2 0 1 0 0-614.4 307.2 307.2 0 0 0 0 614.4z m0 68.266667C304.64 887.466667 136.533333 719.36 136.533333 512S304.64 136.533333 512 136.533333s375.466667 168.106667 375.466667 375.466667-168.106667 375.466667-375.466667 375.466667z" p-id="3791" fill="#1296db"></path></svg>
         </a>
     </div>
-
 </main>
-
 <#include "module/footer.ftl">
-
 <@footer></@footer>

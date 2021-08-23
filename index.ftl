@@ -16,7 +16,7 @@
                             ${user.nickname!}  <!--作者名称-->
                         </span>
                         <span class="post-date">
-                            ${post.createTime?string("yyyy-MM-dd")} <!--文章发布时间-->
+                            ${post.createTime?string("yyyy年MM月dd日")} <!--文章发布时间-->
                         </span>
                     </div>
                     <div class="post-content">
@@ -32,11 +32,6 @@
 	        	    </p>
                 </div>
             </#list>
-
-
-
-
-
             <#if posts.totalPages gt 1>
                 <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
                     <nav class="post-bottom">
@@ -64,19 +59,13 @@
                                 </span>
                             <#else>
                             </#if>
-
-
                         </div>
                     </nav>
                 </@paginationTag>
             </#if>
-
-                  
-            
         </article>
         <#include "module/sidebar.ftl">
     </div>
 </main>
-
 <#include "module/footer.ftl">
 <@footer></@footer>

@@ -24,8 +24,8 @@
                 </@menuTag>
                 <li class="menu-li control">
                     <span class="menu-control">
-                        <form action="/search" role="search"  method="post" class="post-nav">
-                            <input class="form-control form-nav" type="text" name="s"  placeholder="搜索一下"/>
+                        <form action="/search" role="search"  method="get" class="post-nav">
+                            <input class="form-control form-nav" type="search" name="keyword"  placeholder="搜索一下"/>
                             <input type="submit" class="menu-submit" value="搜索">
                         </form>
                     <span>

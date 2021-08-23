@@ -1,32 +1,35 @@
 <#include "module/macro.ftl">
 <@head title="友情链接 - ${blog_title!}"/>
-<#include "module/sidebar.ftl">
-<div class="main">
-    <#include "module/page-top.ftl">
-    <div class="autopagerize_page_element">
-        <div class="content">
-            <div class="post-page">
+<#include "module/header.ftl">
+<main class="main ajaxdata">
+    <div class="container">
+        <article id="article" class="article">
+            <div class="post-mains">
+                <a href="${blog_url!}">首页</a> &raquo; <a href="${archives_url!}">归档</a>
+            </div>
+            <div class="post-title">
                 <div class="post animated fadeInDown">
                     <div class="post-title">
                         <h3><a>links</a></h3>
                     </div>
                     <div class="post-content">
-                        <@linkTag method="list">
-                            <#if links?? && links?size gt 0>
-                                <#list links as link>
-                                    <p>
-                                        <a href="${link.url}" target="_blank" rel="external">${link.name}</a>
-                                        <#if link.description!=''>
-                                            – ${link.description}
-                                        </#if>
-                                    </p>
-                                </#list>
-                            </#if>
-                        </@linkTag>
+                        <ul>
+                            <@linkTag method="list">
+                              <#list links as link>
+                                  <li>
+                                      <a href="${link.url!}" target="_blank">
+                                          ${link.name!}
+                                      </a>
+                                  </li>
+                              </#list>
+                            </@linkTag>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
+        <#include "module/sidebar.ftl">
     </div>
-</div>
+</main>
+<#include "module/footer.ftl">
 <@footer></@footer>

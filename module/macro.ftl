@@ -19,8 +19,6 @@
 <body>
 </#macro>
 <#macro footer>
-<script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery@1.9.1/jquery.min.js"></script>
-
 <@global.statistics />
 </body>
 </html>

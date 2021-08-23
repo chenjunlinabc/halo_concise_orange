@@ -1,10 +1,9 @@
 <#include "module/macro.ftl">
 <@head title="${sheet.title!} - ${blog_title!}"/>
-<#include "module/sidebar.ftl">
-<div class="main">
-    <#include "module/page-top.ftl">
-    <div class="autopagerize_page_element">
-        <div class="content">
+<#include "module/header.ftl">
+<main class="main ajaxdata">
+    <div class="container">
+        <article id="article" class="article">
             <div class="post-page">
                 <div class="post animated fadeInDown">
                     <div class="post-title">
@@ -12,18 +11,17 @@
                             <a>${sheet.title!}</a>
                         </h3>
                     </div>
+                    <ul class="nav post-meta">
+                        <li class="nav-item">
+                            ${user.nickname!}  <!--作者名称-->
+
+                        </li>
+                        <li class="nav-item">
+                            ${post.createTime?string("yyyy年MM月dd日")} <!--文章发布时间-->
+                        </li>
+                    </ul>
                     <div class="post-content">
                         ${sheet.formatContent!}
-                    </div>
-                    <div class="post-footer">
-                        <div class="meta">
-                            <div class="info">
-                                <i class="fa fa-sun-o"></i>
-                                <span class="date">${sheet.createTime?string("yyyy-MM-dd")}</span>
-                                <i class="fa fa-comment-o"></i>
-                                <a href="${sheet.fullPath!}#comment_widget">Comments</a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="share" style="display: inline-flex">
@@ -45,7 +43,9 @@
                     <@comment post=sheet type="sheet" />
                 </div>
             </div>
-        </div>
+        </article>
+        <#include "module/sidebar.ftl">
     </div>
-</div>
+</main>
+<#include "module/footer.ftl">
 <@footer></@footer>
