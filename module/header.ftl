@@ -22,7 +22,9 @@
                     <span class="widget-list">
                         <@categoryTag method="list">
                             <#list categories as category>
-                                <a href="${category.fullPath!}">${category.name!}</a>
+                                <div>
+                                    <a href="${category.fullPath!}">${category.name!}</a>
+                                </div>
                             </#list>
                         </@categoryTag>
                     </span>
