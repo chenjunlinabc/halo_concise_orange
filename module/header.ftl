@@ -14,14 +14,28 @@
         <!--导航栏-->
         <nav class="navbar">
             <ul class="nav-menu">
+                <li class="menu-li">
+                    <a class="menu-link" href="${blog_url!}">首页</a>
+                </li>
+                <li class="menu-li">
+                    <a class="classify">分类</a>
+                    <span class="widget-list">
+                        <@categoryTag method="list">
+                            <#list categories as category>
+                                <a href="${category.fullPath!}">${category.name!}</a>
+                            </#list>
+                        </@categoryTag>
+                    </span>
+                </li>
+                
                 <@menuTag method="list">
                     <#list menus?sort_by('priority') as menu>
                         <li class="menu-li">
                             <a class="menu-link" href="${menu.url!}" target="${menu.target!}">${menu.name!} </a>
                         </li>
-                        
                     </#list>
                 </@menuTag>
+                
                 <li class="menu-li control">
                     <span class="menu-control">
                         <form action="/search" role="search"  method="get" class="post-nav">

@@ -5,12 +5,12 @@
     <div class="container">
         <article id="article" class="article">
             <div class="post-mains">
-                <a href="${blog_url!}">首页</a> &raquo; <a href="${archives_url!}">归档</a>
+                <a href="${blog_url!}">首页</a> &raquo; <a href="/links">友情链接</a>
             </div>
             <div class="post-title">
                 <div class="post animated fadeInDown">
                     <div class="post-title">
-                        <h3><a>links</a></h3>
+                        <h4><a>links</a></h4>
                     </div>
                     <div class="post-content">
                         <ul>

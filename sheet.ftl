@@ -4,12 +4,15 @@
 <main class="main ajaxdata">
     <div class="container">
         <article id="article" class="article">
+            <div class="post-mains">
+                <a href="${blog_url!}">首页</a> &raquo; <a href="${sheet_url!}">${sheet.title!}</a>
+            </div>
             <div class="post-page">
                 <div class="post animated fadeInDown">
                     <div class="post-title">
-                        <h3>
+                        <h4>
                             <a>${sheet.title!}</a>
-                        </h3>
+                        </h4>
                     </div>
                     <ul class="nav post-meta">
                         <li class="nav-item">
